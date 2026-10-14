@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh; /* Allows the page to grow and scroll if the screen is too short */
+    padding: 20px;     /* Gives breathing room so the card doesn't slam into screen edges */
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    background: hsl(0, 0%, 100%);
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content picture {
+    width: 50%;
+    display: block;
+}
+
+.content {
+    display: flex;
+}
+
+.main-content {
+    width: 50%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+p {
+    font-size: 14px;
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 16px;
+}
+
+.prices-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 24px;
+}
+
+.first-price {
+    color: hsl(158, 36%, 37%);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.second-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.main-content button {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    gap: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-content button img {
+    width: 15px;
+    height: auto;
+}
+
+.main-content button:hover {
+    background-color: hsl(158, 42%, 27%);
+}
+
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content picture,
+    .main-content {
+        width: 100%;
+    }
+}
